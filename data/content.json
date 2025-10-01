@@ -1,0 +1,63 @@
+{
+    "site": {
+      "title": "My Portfolio"
+    },
+    "hero": {
+      "title": "Hi, I'm 罗森一 (Senyi Luo)",
+      "subtitle": ""
+    },
+    "experience":[
+      {
+        "title":"Financial Technology Intern",
+        "Institution":" Industrial and Commercial Bank of China, Henan Branch",
+        "description":""
+      },
+      {
+        "title":"Undergraduate Teaching Assistant",
+        "Institution":"University of Bristol, Computer Science Department",
+        "description":""
+      },
+      {
+        "title":"Data Science Research Intern",
+        "Institution":" Jean Golding Data Science Institute",
+        "description":""        
+      },
+      {
+        "title":"Student Ambassador (Part-time)",
+        "Institution":"University of Bristol",
+        "description":""
+      }
+    ],      
+    "projects": [
+      {
+        "name": "Virtualised 5G SA Network for Green Communication Testing",
+        "description": "",
+        "url": ""
+      },
+      {
+        "name": "Multi-Objective Energy Benchmarking for LLM Inference",
+        "description": "",
+        "url": ""
+      },
+      {
+        "name": "Sustainability Analysis of Alipay",
+        "description": "",
+        "url": ""        
+      },
+      {
+        "name": "Hull City Streetlight Visualization System",
+        "description": "",
+        "url": ""          
+      },
+      {
+        "name": "HCI Analysis for library kiosk",
+        "description": "",
+        "url": ""          
+      },
+      {
+        "name": "3D Unity Game",
+        "description": "",
+        "url": ""          
+      }
+    ]
+  }  

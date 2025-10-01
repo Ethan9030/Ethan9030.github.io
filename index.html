@@ -1,0 +1,48 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Site</title>
+  <!-- Basic global stylesheet -->
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <!-- Simple site shell; JS will inject content into these placeholders -->
+
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="#">Ethan9030</a>
+      <button id="themeToggle" aria-label="Toggle theme">🌗Theme</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Hero section populated via JSON -->
+    <section id="hero" class="hero"></section>
+
+    <section class="icons">
+      <div class="icon-grid">
+        <img src="/img/icons/China.png"/>
+        <img src="/img/icons/bristol.png"/>
+        <img src="/img/icons/BVB.png"/>
+        <img src="/img/icons/Epic.png"/>
+        <img src="/img/icons/Overwatch.png"/>
+        <img src="/img/icons/Reaper.png"/>
+        <img src="/img/icons/Saitama Ok Face.png"/>
+        <img src="/img/icons/Star War.png"/>
+        <img src="/img/icons/Steam.png"/>
+        <img src="/img/icons/Vscode.png"/>
+        <img src="/img/icons/Game boy.png"/>
+      </div>
+    </section>
+    <section id="experience" class="experience"></section>
+
+    <!-- Projects list populated via JSON -->
+    <section id="projects" class="projects"></section>
+  </main>
+
+  <!-- App script (deferred to keep HTML/CSS first) -->
+  <script defer src="assets/app.js"></script>
+</body>
+</html>

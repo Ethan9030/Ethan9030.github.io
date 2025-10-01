@@ -1,0 +1,118 @@
+/* Minimal CSS for basic layout and readability */
+
+/* Reset-ish */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+img { max-width: 100%; display: block; }
+
+/* Typography and colors */
+:root {
+  /* Light theme tokens */
+  --bg: #ffffff;
+  --text: #0b0c0f;
+  --muted: #667085;
+  --card: #f6f7f9;
+  --brand: #2155ff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark theme tokens (auto if user prefers dark) */
+    --bg: #0b0c0f;
+    --text: #e8e8ea;
+    --muted: #9aa0a6;
+    --card: #121418;
+    --brand: #4f8cff;
+  }
+}
+
+/* Allow manual toggle override via data-theme attribute */
+html[data-theme="light"] {
+  --bg: #ffffff;
+  --text: #0b0c0f;
+  --muted: #667085;
+  --card: #f6f7f9;
+  --brand: #2155ff;
+}
+html[data-theme="dark"] {
+  --bg: #0b0c0f;
+  --text: #e8e8ea;
+  --muted: #9aa0a6;
+  --card: #121418;
+  --brand: #4f8cff;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", sans-serif;
+}
+
+.container { max-width: 960px; margin: 0 auto; padding: 24px; }
+
+/* 导航栏 */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background: color-mix(in srgb, var(--bg) 70%, transparent);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
+}
+.nav { display: flex; justify-content: space-between; align-items: center; padding: 12px 24px; }
+.logo { font-weight: 700; text-decoration: none; color: var(--text); }
+
+.hero { padding: 40px 0; }
+.hero h1 { margin: 0 0 8px; font-size: clamp(28px, 6vw, 44px); line-height: 1.2; }
+.hero p { margin: 0; color: var(--muted); }
+
+/* Icon grid keeps badges uniform and responsive */
+.icons {
+  padding: 24px 0;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  justify-items: center;
+  align-items: center;
+}
+
+.icon-grid img {
+  width: clamp(70px, 12vw, 100px);
+  height: clamp(70px, 12vw, 100px);
+  object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  .icon-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .icon-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .icon-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Experience */
+.experience {
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+
+/* Projects */
+.projects {
+  font-family: "Georgia", "Times New Roman", serif;
+}
