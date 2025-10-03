@@ -65,9 +65,120 @@ body {
 .nav { display: flex; justify-content: space-between; align-items: center; padding: 12px 24px; }
 .logo { font-weight: 700; text-decoration: none; color: var(--text); }
 
+/* theme */
+#themeToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--brand) 45%, transparent);
+  background: color-mix(in srgb, var(--card) 90%, transparent);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+  color: var(--text);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#themeToggle::before {
+  content: "☀";
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+html[data-theme="dark"] #themeToggle {
+  background: color-mix(in srgb, var(--card) 70%, rgba(255, 255, 255, 0.06));
+  border-color: color-mix(in srgb, var(--brand) 55%, transparent);
+}
+
+html[data-theme="dark"] #themeToggle::before {
+  content: "🌙";
+}
+
+#themeToggle:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.16);
+}
+
+#themeToggle:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.16);
+}
+
+#themeToggle:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--brand) 60%, transparent);
+  outline-offset: 3px;
+}
+
 .hero { padding: 40px 0; }
 .hero h1 { margin: 0 0 8px; font-size: clamp(28px, 6vw, 44px); line-height: 1.2; }
 .hero p { margin: 0; color: var(--muted); }
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--card) 85%, transparent);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.nav-links a {
+  position: relative;
+  padding: 6px 10px;
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: -4px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--brand), color-mix(in srgb, var(--brand) 55%, var(--text)));
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.nav-links a:hover::after {
+  opacity: 0.4;
+  transform: translateY(0);
+}
+
+.nav-links a[aria-current="page"] {
+  color: var(--text);
+}
+
+.nav-links a[aria-current="page"]::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 680px) {
+  .nav {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+}
 
 /* Icon grid keeps badges uniform and responsive */
 .icons {
