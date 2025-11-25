@@ -1,0 +1,85 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fun / Personal</title>
+  <link rel="icon" href="./img/header/LUO_header.ico" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/fun-personal.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html">Ethan9030</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="fun-personal.html" aria-current="page">Personal</a>
+      </div>
+      <button id="themeToggle" class="pill-button" aria-label="Toggle theme">Theme</button>
+    </nav>
+  </header>
+
+  <main class="fun-container">
+    <section class="fun-hero" data-section>
+      <h1>💖Songs</h1>
+    </section>
+
+    <section class="fun-audio" data-section>
+      <div class="player" data-player>
+        <div class="player-track">
+          <div class="track-meta">
+            <h2 class="track-title" data-track-title>Nothing playing yet</h2>
+            <p class="track-artist" data-track-artist>Add a track to get started</p>
+          </div>
+          <div class="player-controls">
+            <button type="button" class="control" data-action="prev" aria-label="Previous track">&laquo;</button>
+            <button type="button" class="control is-primary" data-action="toggle" aria-label="Play or pause">Play</button>
+            <button type="button" class="control" data-action="next" aria-label="Next track">&raquo;</button>
+          </div>
+        </div>
+
+        <div class="player-progress">
+          <span class="time" data-elapsed>00:00</span>
+          <div class="progress" data-progress>
+            <div class="progress-fill" data-progress-fill></div>
+          </div>
+          <span class="time" data-duration>00:00</span>
+        </div>
+
+        <div class="player-playlist" data-playlist>
+          <p class="player-empty" data-empty-message>
+            No tracks yet. Update the playlist data once your audio files are ready.
+          </p>
+          <ul class="playlist" data-track-list></ul>
+        </div>
+
+        <audio preload="metadata" data-audio></audio>
+      </div>
+    </section>
+
+    <!-- <section class="fun-grid" data-section>
+      <h2>More Fun Coming Soon</h2>
+      <p>Use this area for mini-projects, experiment logs, or anything else you want to share.</p>
+      <div class="cards" data-card-grid></div>
+    </section> -->
+  </main>
+
+  <!-- Music playist -->
+  <script type="application/json" id="funPersonalPlaylist">
+    [
+      {
+        "title": "Lost Stars",
+        "artist": "Adam Levine",
+        "src": "music/Lost Stars.mp3"
+      },
+      {
+        "title": "未竟",
+        "artist": "秦勇&游戏科学",
+        "src": "music/未竟.mp3"
+      }
+    ]
+  </script>
+  <script defer src="assets/fun-personal.js"></script>
+</body>
+</html>
