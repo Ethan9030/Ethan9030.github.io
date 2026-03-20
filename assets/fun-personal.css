@@ -238,6 +238,19 @@
   max-width: 58ch;
 }
 
+.fun-footer {
+  width: min(960px, 100% - 32px);
+  margin: 0 auto;
+  padding: 0 1.25rem 2.5rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.fun-footer p {
+  margin: 0;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
