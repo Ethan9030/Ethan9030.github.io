@@ -222,6 +222,11 @@ html[data-theme="dark"] #themeToggle::before {
   font-family: "Georgia", "Times New Roman", serif;
 }
 
+/* Education */
+.education {
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
 
 /* Projects */
 .projects {

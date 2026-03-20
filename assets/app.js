@@ -48,6 +48,26 @@
         </div>
       `;
     }
+      // Render education list from JSON
+    function renderEducation(education) {
+      const el = document.getElementById("education");
+      if (!el) return;
+
+      const items = Array.isArray(education) ? education : [];
+      el.innerHTML = `
+        <h1>${items.length ? "Education" : "No Education Yet"}</h1>
+        <div class="grid">
+          ${items.map(ed => `
+            <article class="card">
+              <h2>${ed.school || "Degree"}</h2>
+              <h4><strong>${ed.degree || "School"}</strong></h4>
+              ${ed.dates ? `<p>${ed.dates}</p>` : ""}
+              ${ed.details ? `<p>${ed.details}</p>` : ""}
+            </article>
+          `).join("")}
+        </div>
+      `;
+    }
 
     // Render projects list from JSON
     function renderProjects(projects) {
@@ -77,6 +97,7 @@
         const data = await res.json();
         // Expect structure: { site: {...}, hero: {...}, projects: [...] }
         renderHero(data.hero);
+        renderEducation(data.education);
         renderProjects(data.projects);
         renderExperience(data.experience);
         // Optionally update title if provided

@@ -6,10 +6,25 @@
       "title": "Hi, I'm 罗森一 (Senyi Luo)",
       "subtitle": ""
     },
+    "education":[
+      {
+        "school": "University of Bristol",
+        "degree": "BSc Computer Science"
+      },
+      {
+        "school": "University of Bristol",
+        "degree": "MEng Computer Science"
+      }
+    ],
     "experience":[
       {
         "title":"Financial Technology Intern",
         "Institution":" Industrial and Commercial Bank of China, Henan Branch",
+        "description":""
+      },
+      {
+        "title":"Research Assistant",
+        "Institution":"University of Bristol, Computer Science Department",
         "description":""
       },
       {
@@ -38,26 +53,6 @@
         "name": "Multi-Objective Energy Benchmarking for LLM Inference",
         "description": "",
         "url": ""
-      },
-      {
-        "name": "Sustainability Analysis of Alipay",
-        "description": "",
-        "url": ""        
-      },
-      {
-        "name": "Hull City Streetlight Visualization System",
-        "description": "",
-        "url": ""          
-      },
-      {
-        "name": "HCI Analysis for library kiosk",
-        "description": "",
-        "url": ""          
-      },
-      {
-        "name": "3D Unity Game",
-        "description": "",
-        "url": ""          
       }
     ]
-  }  
+  }
