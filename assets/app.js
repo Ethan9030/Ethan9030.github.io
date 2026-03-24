@@ -88,7 +88,30 @@
         </div>
       `;
     }
-  
+
+    // Render articles list from JSON
+    function renderArticles(articles) {
+      const el = document.getElementById("articles");
+      if (!el) return;
+
+      const items = Array.isArray(articles) ? articles : [];
+      el.innerHTML = `
+        <h1>${items.length ? "Publications" : "No Publications Yet"}</h1>
+        <div class="grid">
+          ${items.map(a => `
+            <article class="card">
+              <h3>${a.title ?? "Untitled Article"}</h3>
+              ${a.authors ? `<p><strong>Authors:</strong> ${a.authors}</p>` : ""}
+              ${a.venue ? `<p><strong>Venue:</strong> ${a.venue}</p>` : ""}
+              ${a.year ? `<p><strong>Year:</strong> ${a.year}</p>` : ""}
+              ${a.description ? `<p>${a.description}</p>` : ""}
+              ${a.url ? `<a href="${a.url}" target="_blank" rel="noreferrer">Read</a>` : ""}
+            </article>
+          `).join("")}
+        </div>
+      `;
+    }
+
     // Load JSON content (basic fetch; ensure /data/content.json exists)
     async function loadContent() {
       try {
@@ -100,6 +123,7 @@
         renderEducation(data.education);
         renderProjects(data.projects);
         renderExperience(data.experience);
+        renderArticles(data.articles);
         // Optionally update title if provided
         if (data.site && data.site.title) document.title = data.site.title;
       } catch (err) {
@@ -107,6 +131,7 @@
         console.error(err);
         renderHero({ title: "Welcome", subtitle: "Could not load content.json." });
         renderProjects([]);
+        renderArticles([]);
       }
     }
   

@@ -232,3 +232,8 @@ html[data-theme="dark"] #themeToggle::before {
 .projects {
   font-family: "Georgia", "Times New Roman", serif;
 }
+
+/* Articles */
+.articles {
+  font-family: "Georgia", "Times New Roman", serif;
+}

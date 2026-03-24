@@ -54,5 +54,15 @@
         "description": "",
         "url": ""
       }
+    ],
+    "articles": [
+      {
+        "title": "Paper Title",
+        "authors": "Your Name, Co-author",
+        "venue": "Journal / Conference",
+        "year": "2026",
+        "description": "One-line summary",
+        "url": "https://doi.org/xxx or paper link"
+      }
     ]
   }
